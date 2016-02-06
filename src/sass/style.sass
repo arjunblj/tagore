@@ -1,0 +1,23 @@
+
+body
+  margin: 0
+
+.app-wrapper
+  display: flex
+  height: 100vh
+
+.editor,
+.viewer
+  // Overwriting browser default textarea styling.
+  overflow: auto
+  outline: none
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+  border: none
+
+  width: 50%
+  border-right: 1px solid black
+
+.viewer
+  border: none

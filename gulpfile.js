@@ -44,7 +44,7 @@ function bundle() {
 }
 
 gulp.task('sass', function () {
-  gulp.src('./src/sass/**/*.sass')
+  gulp.src('./src/sass/*.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./build/css'))
 })
@@ -76,7 +76,7 @@ gulp.task('lint', function () {
 
 gulp.task('default', ['browserify', 'sass', 'markup', 'css', 'lint'], function() {
   gulp.watch('src/js/**', ['browserify'])
-  gulp.watch('src/sass/**', ['sass'])
+  gulp.watch('src/sass/*.sass', ['sass'])
   gulp.watch('src/htdocs/**', ['markup'])
   gulp.watch('src/css/**', ['css'])
   gulp.watch('src/js/*.js', ['lint'])
