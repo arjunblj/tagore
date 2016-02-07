@@ -61,7 +61,7 @@ gulp.task('markup', function() {
 gulp.task('css', function() {
   var dest = './build/css'
 
-  return gulp.src('src/css/**')
+  return gulp.src('src/css/*.css')
     .pipe(plumber())
     .pipe(changed(dest))
     .pipe(gulp.dest(dest))
@@ -78,6 +78,6 @@ gulp.task('default', ['browserify', 'sass', 'markup', 'css', 'lint'], function()
   gulp.watch('src/js/**', ['browserify'])
   gulp.watch('src/sass/*.sass', ['sass'])
   gulp.watch('src/htdocs/**', ['markup'])
-  gulp.watch('src/css/**', ['css'])
+  gulp.watch('src/css/*.css', ['css'])
   gulp.watch('src/js/*.js', ['lint'])
 });
