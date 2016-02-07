@@ -2,6 +2,7 @@
 import React from 'react'
 
 import Editor from './Editor.jsx'
+import Viewer from './Viewer.jsx'
 
 export default React.createClass({
 
@@ -22,9 +23,7 @@ export default React.createClass({
         <Editor
           defaultValue={text}
           onTextChange={this.handleTextChange} />
-        <div className='viewer'>
-          {text}
-        </div>
+        <Viewer text={text} />
       </div>
     )
   }
